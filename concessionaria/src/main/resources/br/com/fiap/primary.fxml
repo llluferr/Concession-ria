@@ -3,16 +3,17 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="br.com.fiap.PrimaryController">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fiap.PrimaryController">
   <tabs>
     <Tab text="Cadastro">
          <content>
@@ -73,7 +74,16 @@
          </content></Tab>
     <Tab text="Consulta">
          <content>
-            <ListView prefHeight="200.0" prefWidth="200.0" />
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <top>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <items>
+                      <Button mnemonicParsing="false" onAction="#ordenarPorPreco" text="Ordenar por preco" />
+                        <Button mnemonicParsing="false" onAction="#ordernarPorAno" text="Ordenar por ano" />
+                    </items>
+                  </ToolBar>
+               </top>
+            </BorderPane>
          </content></Tab>
   </tabs>
 </TabPane>

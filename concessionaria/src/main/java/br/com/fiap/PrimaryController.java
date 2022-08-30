@@ -1,6 +1,7 @@
 package br.com.fiap;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javafx.fxml.FXML;
@@ -29,5 +30,14 @@ public class PrimaryController {
         Veiculo veiculo = new Veiculo(marca, modelo, placa, preco, ano);
         lista.add(veiculo);
         lvVeiculos.getItems().addAll(lista);
+    }
+
+
+    public void ordenarPorPreco(){
+        System.out.println("ordenar pro preco");
+    }
+
+    public void ordernarPorAno(){
+        Collections.sort(lista);
     }
 }

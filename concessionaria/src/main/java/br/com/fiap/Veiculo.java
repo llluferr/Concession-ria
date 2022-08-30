@@ -1,6 +1,6 @@
 package br.com.fiap;
 
-public class Veiculo {
+public class Veiculo{
     //Model BO POJO Entity Resource
     //atributos 
     private String marca;
